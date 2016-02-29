@@ -1,0 +1,35 @@
+{
+  "name": "rufio-filter-mediameta",
+  "version": "1.0.0",
+  "description": "A filter to parse meta from a media item",
+  "main": "index.js",
+  "scripts": {
+    "test": "happiness && mocha"
+  },
+  "keywords": [
+    "rufio",
+    "stream",
+    "media",
+    "meta"
+  ],
+  "author": "Wes Todd",
+  "license": "ISC",
+  "devDependencies": {
+    "happiness": "^5.5.0",
+    "mocha": "^2.3.3",
+    "rufio": "^0.1.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesleytodd/rufio-filter-mediameta.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wesleytodd/rufio-filter-mediameta/issues"
+  },
+  "homepage": "https://github.com/wesleytodd/rufio-filter-mediameta",
+  "dependencies": {
+    "mime": "^1.3.4",
+    "slug": "^0.9.1",
+    "through2": "^2.0.1"
+  }
+}
