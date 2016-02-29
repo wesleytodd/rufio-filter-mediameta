@@ -1,4 +1,4 @@
-# rufio-filter-mediameta
+# Pull meta for a rufio media item
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
@@ -14,10 +14,4 @@
 
 ```
 $ npm install --save rufio-filter-mediameta
-```
-
-## Usage
-
-```javascript
-
 ```

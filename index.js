@@ -9,7 +9,7 @@ module.exports = function () {
 		return through2(function (chunk, enc, done) {
 			done(null, chunk);
 		}, function (done) {
-			fs.lstat(item.filepath, (err, stats) => {
+			fs.lstat(item.absPath, (err, stats) => {
 				if (err) {
 					return done(err);
 				}
@@ -20,8 +20,7 @@ module.exports = function () {
 				item.day = item.date.getDate() + 1;
 				item.title = item.filename;
 				item.slug = slug(path.basename(item.filename, path.extname(item.filename)));
-				item.pathname = item.type.getItemPath(item);
-				item.mime = item.type.mime || mime.lookup(item.filepath);
+				item.mime = item.type.mime || mime.lookup(item.path);
 
 				done();
 			});
