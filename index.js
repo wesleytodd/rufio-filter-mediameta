@@ -6,6 +6,13 @@ var mime = require('mime');
 
 module.exports = function () {
 	return function metaMediaFilter (item) {
+		Object.assign(item, {
+			year: null,
+			month: null,
+			day: null,
+			title: null,
+		}, item);
+
 		return through2(function (chunk, enc, done) {
 			done(null, chunk);
 		}, function (done) {
@@ -19,7 +26,7 @@ module.exports = function () {
 				item.month = item.date.getMonth() + 1;
 				item.day = item.date.getDate() + 1;
 				item.title = item.filename;
-				item.slug = slug(path.basename(item.filename, path.extname(item.filename)));
+				item.slug = slug(item.basename);
 				item.mime = item.type.mime || mime.lookup(item.path);
 
 				done();
